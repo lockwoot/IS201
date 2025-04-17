@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Player Joke Generator</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    #joke-box {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      color: #444;
+      padding: 1rem;
+      max-width: 600px;
+    }
+
+    button {
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0e6edc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏀 NBA Joke Generator</h1>
+  <div id="joke-box">Click below for an NBA laugh!</div>
+  <button onclick="tellJoke()">Tell Me a Joke</button>
+
+  <script>
+    const jokes = [
+      "Why did Steph Curry open a bakery? Because he’s got the best rolls in the game!",
+      "Why did LeBron bring string to the game? To tie the score!",
+      "Why doesn't Kawhi laugh at jokes? Because he already has a straight face on D.",
+      "Why did James Harden get called for traveling? He was on a Euro-trip!",
+      "Why did Shaq become a DJ? Because he already had the best drops.",
+      "Why did Anthony Davis skip geometry class? He couldn't handle the angles.",
+      "What’s Russell Westbrook’s favorite genre of music? Turnover tables.",
+      "Why did Nikola Jokic start gardening? To work on his pick-and-plant game.",
+      "What do you call Klay Thompson when he’s fishing? Splash Brother.",
+      "Why did Chris Paul get a library card? So he could read the court even more.",
+      "Why did Jimmer Fredette go viral? Because even his jokes pull up from 30 feet!"
+    ];
+
+    function tellJoke() {
+      const jokeBox = document.getElementById("joke-box");
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      jokeBox.textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
+
